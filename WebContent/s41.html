@@ -32,9 +32,25 @@
         target.value += 'pop: ' + data.pop() + '\n';
         target.value += 'shift: ' + data.shift() + '\n';
         target.value += 'current status: ' + data + '\n';
-        data.push('push');
+        data.push('push1');
+        data.push('push2');
         data.unshift('unshift');
-        target.value += 'final status: ' + data + '\n';
-    </script>
+        target.value += 'new status: ' + data + '\n';
+        
+        
+    
+        
+        date splice(1, 2);
+        target.value += 'new status: '+ data + '/n';
+        
+        let array =[];
+        for (let i = 0; i < 10; i++){
+        	if(i!== 7) {
+        		array.push(i);
+        	}
+        }
+        	
+        target.value += 'array: ' + array + '/n';
+        </script>
 </body>
 </html>
