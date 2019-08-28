@@ -50,5 +50,24 @@ $(function() {
         let cur = parseInt(msg.css('font-size'));
         msg.css('font-size', cur > 1 ? cur / 2 : 1);
     });
-
+    
+    
+    $('#roller').click(function() {
+    	let result = Math.floor(Math.random() * 6) + 1;
+        $('#dice').val(result);
+        
+        let elemento;
+        if(result > 3) {
+        	elemento = $('<div> You have won!</div>').css({color: 'green'});
+                       } 
+        else {
+        	elemento = $('<div> You have lost!</div>').css({color: 'red'});
+        	 }
+        
+        elemento.appendTo('#results');
+        
+        $('#history').text($('#history').text() + (result > 3 ? 'You have won!\n' : 'You have lost!\n'));
+    });
+        
 });
+
